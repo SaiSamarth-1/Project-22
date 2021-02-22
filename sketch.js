@@ -38,7 +38,7 @@ function setup() {
 		isStatic:true
 	}
 
-	starBody = Bodies.circle(650 , 30 , 5 , op);
+	starBody = Bodies.circle(650 , 30 , 5 , options);
 	World.add(world, starBody);
 	
 	Engine.run(engine);
@@ -59,7 +59,7 @@ function draw() {
 
 function keyPressed() {
 	if(keyCode === DOWN_ARROW){
-
+		Body.setStatic(starBody, false)
 	}
 	
 }
